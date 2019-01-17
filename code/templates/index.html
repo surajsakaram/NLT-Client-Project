@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+        <title>News feed - {{ title }}</title>
+    {% else %}
+        <title>News feed</title>
+    {% endif %}
+  </head>
+  <body>
+    <h2>DANK NEWS ABOUT FIRE!</h2>
+
+    <p>This project is a sorry attempt to display relevant news articles about wildfires because the actual client project wants us to build a god damn google news-esque website.... OK... SURE.... give me an army of web-dev engineers, Natural Language machine learning wizards, and someone to bring me endless philtered souls along with a fuck ton of money and i'll get back to ya! </p>
+
+
+
+    <form action="{{ url_for('json_route')}}" method="post">
+        Keyword: <input type="text" value="Fire" name="selection"><br>
+        <input type="submit" value="submit">
+    </form>
+
+
+  </body>
+</html>
