@@ -101,4 +101,4 @@ def json_route():
 
 # Allows us to dynamically update webpage without having to quit the flask server
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
