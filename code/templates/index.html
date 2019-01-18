@@ -9,14 +9,18 @@
     {% endif %}
   </head>
   <body>
-    <h2>DANK NEWS ABOUT FIRE!</h2>
+    <h1>Relevant Disaster News</h1>
 
-    <p>This project is a sorry attempt to display relevant news articles about wildfires because the actual client project wants us to build a god damn google news-esque website.... OK... SURE.... give me an army of web-dev engineers, Natural Language machine learning wizards, and someone to bring me endless philtered souls along with a fuck ton of money and i'll get back to ya! </p>
-
-
+    <p>This project is the foundations for a web application to obtain disaster-related news. After selecting a specific disaster, the webpage displays the most relevant news pertaining to that topic published in the past twelve months.</p>
 
     <form action="{{ url_for('json_route')}}" method="post">
-        Keyword: <input type="text" value="Fire" name="selection"><br>
+        Keyword: <!-- <input type="text" value="Fire" name="selection"><br> -->
+        <select name="selection">
+            <option value="wildfire">Wildfire</option>
+            <option value="earthquake">Earthquake</option>
+            <option value="flood">Flood</option>
+        </select>
+        <br><br>
         <input type="submit" value="submit">
     </form>
 
